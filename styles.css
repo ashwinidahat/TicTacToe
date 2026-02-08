@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Global */
 * {
   margin: 0;
@@ -120,4 +121,128 @@ h1 {
   opacity: 0.9;
   letter-spacing: 1px;
   text-shadow: 0 0 8px rgba(0,0,0,0.5);
+=======
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🌈 LINEAR GRADIENT BACKGROUND */
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.game-container {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Game cells */
+.cell {
+  background: white;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform .1s;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+/* Buttons */
+#resetBtn, #newGameBtn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+
+#newGameBtn {
+  background: #ffca28;
+}
+
+/* RESULT SCREEN */
+.result-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-box {
+  background: white;
+  width: 80%;
+  max-width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  animation: popup .3s ease-in-out;
+}
+
+.result-text {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Popup animation */
+@keyframes popup {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.footer {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+  color: white;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+>>>>>>> 4acc146fb98b5b513b5181fb93ec938a641de5bc
 }
